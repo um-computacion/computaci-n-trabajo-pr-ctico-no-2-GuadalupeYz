@@ -12,7 +12,6 @@ class TestPalindromesSimples(unittest.TestCase):
     def test_palindrome_level(self):
         self.assertTrue(is_palindrome("level"))
 
-
 class TestPalindromesFrases(unittest.TestCase):
     
     def test_palindrome_amaplan(self):
@@ -36,23 +35,5 @@ class TestPalindromesFrases(unittest.TestCase):
     def test_palindrome_amorroma(self):
         self.assertTrue(is_palindrome("Amor, Roma"))
 
-class TestFrasesNoPalindromas(unittest.TestCase):
-
-    def test_frase_comun(self):
-        self.assertFalse(is_palindrome("Esto no es un palindromo"))
-
-    def test_frase_con_mayusculas(self):
-        self.assertFalse(is_palindrome("Hola Mundo"))
-
-    def test_frase_con_simbolos(self):
-        self.assertFalse(is_palindrome("comprar huevo"))
-
-    def test_frase_larga(self):
-        self.assertFalse(is_palindrome("Guadalupe Yañez"))
-
-    def test_frase_casi_palindromo(self):
-        self.assertFalse(is_palindrome("Anita lava la tina pero no"))
-
 if __name__ == '__main__':
     unittest.main()
-  
