@@ -53,6 +53,32 @@ class TestFrasesNoPalindromas(unittest.TestCase):
     def test_frase_casi_palindromo(self):
         self.assertFalse(is_palindrome("Anita lava la tina pero no"))
 
+class TestPalindromesEdgeCases(unittest.TestCase):
+
+    def test_cadena_vacia(self):
+        self.assertTrue(is_palindrome(""))
+
+    def test_una_letra_minuscula(self):
+        self.assertTrue(is_palindrome("a"))
+
+    def test_una_letra_mayuscula(self):
+        self.assertTrue(is_palindrome("A"))
+
+    def test_solo_espacios(self):
+        self.assertTrue(is_palindrome("   "))
+
+    def test_simbolos_no_letras(self):
+        self.assertTrue(is_palindrome("!!!"))
+
+    def test_numero_unico(self):
+        self.assertTrue(is_palindrome("1"))
+
+    def test_palabra_con_acentos(self):
+        self.assertFalse(is_palindrome("árbol"))
+
+    def test_frase_con_acentos(self):
+        self.assertFalse(is_palindrome("Anita lavó la tina"))
+
 if __name__ == '__main__':
     unittest.main()
   
