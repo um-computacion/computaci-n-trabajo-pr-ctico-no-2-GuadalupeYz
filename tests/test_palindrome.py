@@ -78,5 +78,6 @@ class TestPalindromesEdgeCases(unittest.TestCase):
     def test_frase_con_acentos(self):
         self.assertFalse(is_palindrome("Anita lavó la tina"))
 
+
 if __name__ == '__main__':
     unittest.main()
